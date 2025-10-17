@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tiocao's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Added header with logo -->
+    <header class="header">
+      <div class="logo">
+        <span class="logo-icon">🌙</span>
+        <span class="logo-text">PKathrine18</span>
+      </div>
+    </header>
+
+    <div class="room-container">
+      <!-- Background Image -->
+      <img src="/images/image_final.png" class="bg" alt="Portfolio Room" />
+
+      <!-- Clickable Hotspots with Labels -->
+      <div class="hotspot" id="skills" data-label="Skills">
+        <div class="dot"></div>
+      </div>
+      <div class="hotspot" id="projects" data-label="Projects">
+        <div class="dot"></div>
+      </div>
+      <div class="hotspot" id="contact" data-label="Contact">
+        <div class="dot"></div>
+      </div>
+      <div class="hotspot" id="goals" data-label="Goals">
+        <div class="dot"></div>
+      </div>
+      <div class="hotspot" id="about-me" data-label="About Me">
+        <div class="dot"></div>
+      </div>
+      <div class="hotspot" id="achievements" data-label="Achievements">
+        <div class="dot"></div>
+      </div>
+    </div>
+
+    <!-- Modal Overlay -->
+    <div id="modal-overlay" class="modal-overlay"></div>
+
+    <!-- Modals -->
+    <div id="modal-skills" class="modal">
+      <div class="modal-content">
+        <button class="close-btn">&times;</button>
+        <div class="modal-header">
+          <h2>Skills</h2>
+          <p class="modal-subtitle">Technical expertise</p>
+        </div>
+        <div class="modal-body">
+          <div class="skill-category">
+            <h3>Frontend</h3>
+            <div class="skill-tags">
+              <span class="tag tag-frontend">HTML/CSS</span>
+              <span class="tag tag-frontend">JavaScript</span>
+              <span class="tag tag-frontend">React</span>
+              <span class="tag tag-frontend">Responsive Design</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Backend</h3>
+            <div class="skill-tags">
+              <span class="tag tag-backend">Node.js</span>
+              <span class="tag tag-backend">Python</span>
+              <span class="tag tag-backend">Databases</span>
+              <span class="tag tag-backend">APIs</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Tools</h3>
+            <div class="skill-tags">
+              <span class="tag tag-tools">Git</span>
+              <span class="tag tag-tools">VS Code</span>
+              <span class="tag tag-tools">Figma</span>
+              <span class="tag tag-tools">Docker</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-projects" class="modal">
+      <div class="modal-content">
+        <button class="close-btn">&times;</button>
+        <div class="modal-header">
+          <h2>Projects</h2>
+          <p class="modal-subtitle">Featured work</p>
+        </div>
+        <div class="modal-body">
+          <div class="project-item">
+            <h3>E-Commerce Platform</h3>
+            <p>
+              Full-stack web application with payment integration and real-time
+              inventory management.
+            </p>
+            <div class="project-tech">React • Node.js • MongoDB</div>
+          </div>
+          <div class="project-item">
+            <h3>Task Management App</h3>
+            <p>
+              Collaborative tool for team productivity with real-time updates
+              and notifications.
+            </p>
+            <div class="project-tech">Vue.js • Firebase • Tailwind</div>
+          </div>
+          <div class="project-item">
+            <h3>Data Visualization Dashboard</h3>
+            <p>
+              Interactive analytics dashboard with charts and real-time data
+              processing.
+            </p>
+            <div class="project-tech">React • D3.js • Python</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-contact" class="modal">
+      <div class="modal-content">
+        <button class="close-btn">&times;</button>
+        <div class="modal-header">
+          <h2>Contact</h2>
+          <p class="modal-subtitle">Get in touch</p>
+        </div>
+        <div class="modal-body">
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <div>
+              <p class="contact-label">Email</p>
+              <p class="contact-value">hello@tiocao.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">💼</span>
+            <div>
+              <p class="contact-label">LinkedIn</p>
+              <p class="contact-value">linkedin.com/in/tiocao</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">🐙</span>
+            <div>
+              <p class="contact-label">GitHub</p>
+              <p class="contact-value">github.com/tiocao</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <p class="contact-label">Location</p>
+              <p class="contact-value">Your City, Country</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-goals" class="modal">
+      <div class="modal-content">
+        <button class="close-btn">&times;</button>
+        <div class="modal-header">
+          <h2>Goals</h2>
+          <p class="modal-subtitle">What I'm working towards</p>
+        </div>
+        <div class="modal-body">
+          <div class="goal-item">
+            <div class="goal-number">1</div>
+            <div>
+              <h3>Master Full-Stack Development</h3>
+              <p>
+                Become proficient in modern web technologies and best practices.
+              </p>
+            </div>
+          </div>
+          <div class="goal-item">
+            <div class="goal-number">2</div>
+            <div>
+              <h3>Build Impactful Projects</h3>
+              <p>
+                Create applications that solve real-world problems and help
+                people.
+              </p>
+            </div>
+          </div>
+          <div class="goal-item">
+            <div class="goal-number">3</div>
+            <div>
+              <h3>Contribute to Open Source</h3>
+              <p>
+                Give back to the community and collaborate with other
+                developers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-about-me" class="modal">
+      <div class="modal-content">
+        <button class="close-btn">&times;</button>
+        <div class="modal-header">
+          <h2>About Me</h2>
+          <p class="modal-subtitle">My story</p>
+        </div>
+        <div class="modal-body">
+          <p>
+            “Hi! I’m a Computer Science student passionate about technology and
+            creativity. I enjoy learning new skills, building projects, and
+            exploring new ideas.”
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-achievements" class="modal">
+      <div class="modal-content">
+        <button class="close-btn">&times;</button>
+        <div class="modal-header">
+          <h2>Achievements</h2>
+          <p class="modal-subtitle">Milestones & accomplishments</p>
+        </div>
+        <div class="modal-body">
+          <div class="achievement-item">
+            <div class="achievement-year">2024</div>
+            <div>
+              <h3>Published 5 Open Source Projects</h3>
+              <p>Contributed meaningful projects to the developer community.</p>
+            </div>
+          </div>
+          <div class="achievement-item">
+            <div class="achievement-year">2023</div>
+            <div>
+              <h3>Completed Advanced Web Development Course</h3>
+              <p>Mastered modern frameworks and best practices.</p>
+            </div>
+          </div>
+          <div class="achievement-item">
+            <div class="achievement-year">2023</div>
+            <div>
+              <h3>First Freelance Project Success</h3>
+              <p>Delivered a full-stack application for a startup client.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Added footer with copyright -->
+    <footer class="footer">
+      <p>&copy; 2025 Tiocao. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
